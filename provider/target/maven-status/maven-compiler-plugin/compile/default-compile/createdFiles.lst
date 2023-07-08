@@ -1,0 +1,7 @@
+com\imooc\config\MyConfig.class
+com\imooc\interceptor\MyInterceptor.class
+com\imooc\ProviderSpringApplication.class
+com\imooc\service\IDeptService.class
+com\imooc\service\impl\DeptServiceImpl.class
+com\imooc\controller\ProviderController.class
+com\imooc\mapper\IDeptDao.class

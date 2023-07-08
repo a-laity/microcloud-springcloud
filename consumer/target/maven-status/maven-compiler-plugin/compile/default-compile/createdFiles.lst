@@ -1,0 +1,4 @@
+com\imooc\config\MyConfig.class
+com\imooc\controller\Mycontroller.class
+com\imooc\interceptor\MyInterceptor.class
+com\imooc\ConsumerSpringApplication.class

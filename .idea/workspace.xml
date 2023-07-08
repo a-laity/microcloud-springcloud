@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76695122-d97f-460f-9657-b765910b69d1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\repository" />
+        <option name="mavenHome" value="E:/download/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\download\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SIBusi575DnSpJz97auVX5e54N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.ConsumerSpringApplication">
+    <configuration name="ConsumerSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.ConsumerSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.imooc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.ProviderSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderSpringApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imooc.ProviderSpringApplication" />
+      <option name="VM_PARAMETERS" value=" -Dserver.port=8007" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ProviderSpringApplication2" />
+      <item itemvalue="Spring Boot.ConsumerSpringApplication" />
+      <item itemvalue="Spring Boot.ProviderSpringApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ConsumerSpringApplication" />
+        <item itemvalue="Spring Boot.ProviderSpringApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76695122-d97f-460f-9657-b765910b69d1" name="Default Changelist" comment="" />
+      <created>1688824440732</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688824440732</updated>
+      <workItem from="1688824444406" duration="10417000" />
+    </task>
+    <task id="LOCAL-00001" summary="创建springcloud项目">
+      <created>1688834934378</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688834934378</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建springcloud项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建springcloud项目" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1688828304132">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1688828304132" />
+    <state x="498" y="190" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1688828176564">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="498" y="190" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1688828176564" />
+    <state x="524" y="110" key="#xdebugger.evaluate" timestamp="1688826915431">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="524" y="110" key="#xdebugger.evaluate/0.0.1536.816@0.0.1536.816" timestamp="1688826915431" />
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1688834960721">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1688834960721" />
+    <state width="415" height="438" key="DebuggerActiveHint" timestamp="1688832899085">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="415" height="438" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1688832899085" />
+    <state x="151" y="64" key="DiffContextDialog" timestamp="1688834859585">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="151" y="64" key="DiffContextDialog/0.0.1536.816@0.0.1536.816" timestamp="1688834859585" />
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1688834520701">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1688834520701" />
+    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1688834520701">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1688834520701" />
+    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1688834520701">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1688834520701" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1688834520701">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1688834520701" />
+    <state width="1493" height="175" key="GridCell.Tab.1.bottom" timestamp="1688834520702">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1688834520702" />
+    <state width="1493" height="175" key="GridCell.Tab.1.center" timestamp="1688834520701">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1688834520701" />
+    <state width="1493" height="175" key="GridCell.Tab.1.left" timestamp="1688834520701">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1688834520701" />
+    <state width="1493" height="175" key="GridCell.Tab.1.right" timestamp="1688834520702">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1688834520702" />
+    <state width="1493" height="175" key="GridCell.Tab.2.bottom" timestamp="1688834520702">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.2.bottom/0.0.1536.816@0.0.1536.816" timestamp="1688834520702" />
+    <state width="1493" height="175" key="GridCell.Tab.2.center" timestamp="1688834520702">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.2.center/0.0.1536.816@0.0.1536.816" timestamp="1688834520702" />
+    <state width="1493" height="175" key="GridCell.Tab.2.left" timestamp="1688834520702">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.2.left/0.0.1536.816@0.0.1536.816" timestamp="1688834520702" />
+    <state width="1493" height="175" key="GridCell.Tab.2.right" timestamp="1688834520702">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="175" key="GridCell.Tab.2.right/0.0.1536.816@0.0.1536.816" timestamp="1688834520702" />
+    <state x="447" y="141" width="642" height="534" key="find.popup" timestamp="1688829563312">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="447" y="141" width="642" height="534" key="find.popup/0.0.1536.816@0.0.1536.816" timestamp="1688829563312" />
+    <state x="574" y="117" width="672" height="678" key="search.everywhere.popup" timestamp="1688832656931">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="117" width="672" height="678" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1688832656931" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/com/netflix/loadbalancer/RoundRobinRule.class</url>
+          <line>29</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/com/netflix/loadbalancer/BestAvailableRule.class</url>
+          <line>17</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0-sources.jar!/com/netflix/loadbalancer/ClientConfigEnabledRoundRobinRule.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

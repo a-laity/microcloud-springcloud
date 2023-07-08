@@ -1,0 +1,50 @@
+server:
+  port: ${port:8006}
+spring:
+  cloud:
+    nacos:
+      discovery:
+#        server-addr: localhost:8848,localhost:8845,localhost:8851
+        server-addr: localhost:8848
+        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
+        group: MICROCLOUD_GROUP # 一般建议大写
+        cluster-name: YootkCluster # 配置集群名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource    # 数据源类型
+    driver-class-name: com.mysql.cj.jdbc.Driver     # 驱动程序类
+    url: jdbc:mysql://localhost:3306/yootk8001?serverTimezone=UTC           # 连接地址
+    username: root                                  # 用户名
+    password: root                            # 连接密码
+    druid: # druid相关配置
+      initial-size: 5                               # 初始化连接池大小
+      min-idle: 10                                  # 最小维持连接池大小
+      max-active: 50                                # 最大支持连接池大小
+      max-wait: 60000                               # 最大等待时间
+      time-between-eviction-runs-millis: 60000      # 关闭空闲连接间隔
+      min-evictable-idle-time-millis: 30000         # 连接最小生存时间
+      validation-query: SELECT 1 FROM dual          # 状态检测
+  application:
+    name: provider
+mybatis:
+  mapper-locations: classpath:mapper/*.xml      # mapper映射文件
+  type-aliases-package: com.imooc.Bean
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mapper:
+  mappers: com.imooc.my.mapper.MyMapper
+  not-empty: false    # 在进行数据库操作的的时候，判断表达式 username != null, 是否追加 username != ''
+  identity: MYSQL
+# 分页插件配置
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
