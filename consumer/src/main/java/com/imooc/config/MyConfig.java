@@ -1,5 +1,7 @@
 package com.imooc.config;
 
+import com.imooc.interceptor.MyInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,8 +17,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class MyConfig implements WebMvcConfigurer {
-//    @Autowired
-//    private MyInterceptor myInterceptor;
+    @Autowired
+    private MyInterceptor myInterceptor;
 
     @Bean
     @LoadBalanced
@@ -24,8 +26,8 @@ public class MyConfig implements WebMvcConfigurer {
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
 
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(myInterceptor);
-//    }
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(myInterceptor);
+    }
 }

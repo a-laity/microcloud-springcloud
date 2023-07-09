@@ -1,0 +1,26 @@
+server:
+  port:  ${port:8008}
+spring:
+  application:
+    name: springGateWay
+  cloud:
+#    gateway:
+#      routes:
+#        - id: route1
+#          uri: lb://consumer
+#          predicates:
+#            - Path=/**
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
+        group: MICROCLOUD_GROUP # 一般建议大写
+        cluster-name: YootkCluster # 配置集群名称
+
+#、、服务名称-dev环境.文件扩展名类型
+nacos:
+  gateway:
+    route:
+      config:
+        data-id: springGateWay-dev-route
+        group: MICROCLOUD_GROUP

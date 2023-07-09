@@ -11,6 +11,7 @@
         <module>common-apis</module>
         <module>consumer</module>
         <module>provider</module>
+        <module>gateway</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
