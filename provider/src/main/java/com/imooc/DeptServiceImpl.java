@@ -1,4 +1,4 @@
-package com.imooc.service.impl;
+package com.imooc;
 
 import com.imooc.bean.DeptDTO;
 import com.imooc.service.IDeptService;

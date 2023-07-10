@@ -12,6 +12,7 @@
         <module>consumer</module>
         <module>provider</module>
         <module>gateway</module>
+        <module>spring-jwt-starter</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
