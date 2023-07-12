@@ -1,0 +1,9 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 921014462@qq.com
+    password: tyybrfzggmuqbbbg
+  application:
+    name: jmail
+server:
+  port: 8009
