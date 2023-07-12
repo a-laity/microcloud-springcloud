@@ -1,5 +1,5 @@
 server:
-  port: ${port:8006}
+  port: ${port:8008}
 spring:
   cloud:
     nacos:
@@ -12,7 +12,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    # 数据源类型
     driver-class-name: com.mysql.cj.jdbc.Driver     # 驱动程序类
-    url: jdbc:mysql://localhost:3306/yootk8001?serverTimezone=UTC           # 连接地址
+    url: jdbc:mysql://localhost:3306/token8201?serverTimezone=UTC           # 连接地址
     username: root                                  # 用户名
     password: root                            # 连接密码
     druid: # druid相关配置
@@ -24,7 +24,7 @@ spring:
       min-evictable-idle-time-millis: 30000         # 连接最小生存时间
       validation-query: SELECT 1 FROM dual          # 状态检测
   application:
-    name: provider
+    name: tokenServer
 mybatis:
   mapper-locations: classpath:mapper/*.xml      # mapper映射文件
   type-aliases-package: com.imooc.bean
@@ -47,4 +47,19 @@ management:
   endpoint:
     health:
       show-details: always
+
+
+yootk:
+  security:
+    config:
+      jwt:
+        sign: muyan
+        issuer: MuyanYootk
+        secret: microcloud-springcloud微服务的jwt密钥
+        expire: 100000 # 单位：秒
+      password:
+        encrypt:
+          repeat: 5
+          salt: www.yootk.com
+
 

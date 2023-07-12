@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.imooc.mapper.IRoleDAO">
+    <resultMap id="BaseResultMap" type="com.imooc.bean.Role">
+        <id column="rid" property="rid" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="dbname" property="dbname" jdbcType="INTEGER"/>
+    </resultMap>
+    <select id="findAllByMember" resultType="java.lang.String">
+        SELECT rid FROM member_role where mid =#{mid}
+    </select>
+
+</mapper>
