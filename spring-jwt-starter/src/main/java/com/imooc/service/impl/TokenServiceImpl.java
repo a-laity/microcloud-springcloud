@@ -4,17 +4,17 @@ import com.alibaba.fastjson2.JSON;
 import com.imooc.config.JWTConfigProperties;
 import com.imooc.service.ITokenService;
 import io.jsonwebtoken.*;
-import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-@Service
+
+//@Service
 public class TokenServiceImpl implements ITokenService {
     @Autowired
     private JWTConfigProperties jwtConfigProperties; // 获取JWT的相关配置属性
@@ -25,7 +25,7 @@ public class TokenServiceImpl implements ITokenService {
     @Override
     public SecretKey generalKey() {
         byte[] bytes = Base64.decodeBase64(Base64.encodeBase64(jwtConfigProperties.getSecret().getBytes()));//获取加密后的密钥
-        SecretKeySpec key = new SecretKeySpec(bytes, 0, bytes.length, "AES");//拿到加密后的key
+        SecretKeySpec key = new SecretKeySpec(bytes, 0, bytes.length, "HmacSHA256");//拿到加密后的key
         System.out.println(key);
         return key;
     }
@@ -50,9 +50,9 @@ public class TokenServiceImpl implements ITokenService {
                 .setHeader(headers) // 保存头信息
                 .setId(id)// 保存ID信息
                 .setIssuedAt(nowDate) // 签发时间
-                .setIssuer(this.jwtConfigProperties.getIssuer()) // 设置签发者
+                .setIssuer(jwtConfigProperties.getIssuer()) // 设置签发者
                 .setSubject(JSON.toJSONString(subject)) // 所要传递的数据转为JSON
-                .signWith(this.signatureAlgorithm, this.generalKey()) // 获取签名算法
+                .signWith(signatureAlgorithm, this.generalKey()) // 获取签名算法
                 .setExpiration(expireDate); // 配置失效时间
         return builder.compact(); // 创建Token
     }
@@ -71,7 +71,8 @@ public class TokenServiceImpl implements ITokenService {
         try {
             Jwts.parser().setSigningKey(this.generalKey()).parseClaimsJws(token).getBody();
             return true; // 没有异常就返回true
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
         return false;
     }
 
