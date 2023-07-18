@@ -45,6 +45,11 @@ public class ProviderController implements CommonController {
         return this.deptService.list();
     }
 
+    public Object add1(@RequestBody DeptDTO deptDTO) {
+
+        return this.deptService.add1(deptDTO);
+    }
+
     private void printRequestHeaders(String restName) {    // 实现所有请求头信息的输出
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         Enumeration<String> headerEnums = request.getHeaderNames();

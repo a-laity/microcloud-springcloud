@@ -30,7 +30,7 @@ public class DeptServiceImpl implements IDeptService {
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("deptno", id);
         DeptDTO deptDTO = deptDao.selectOneByExample(example);
-        if(Objects.isNull(deptDTO)){
+        if (Objects.isNull(deptDTO)) {
             throw new CustomException(ResponseStatusEnum.FAILED);
         }
         return deptDTO;
@@ -50,6 +50,15 @@ public class DeptServiceImpl implements IDeptService {
             }
         }
         return false;
+    }
+
+    public boolean add1(DeptDTO dto) {
+        int insert = deptDao.insert(dto);
+        if (insert > 0) {
+            return true;
+        }
+        return false;
+
     }
 
     @Override

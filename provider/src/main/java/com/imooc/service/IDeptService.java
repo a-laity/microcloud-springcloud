@@ -22,6 +22,8 @@ public interface IDeptService {
      */
     public boolean add(DeptDTO dto);
 
+    public boolean add1(DeptDTO dto);
+
     /**
      * 列出所有的部门数据信息
      *
