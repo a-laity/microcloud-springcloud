@@ -9,23 +9,24 @@ spring:
 #        namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf
 #        group: SEATA_GROUP # 一般建议大写
 #        cluster-name: YootkCluster # 配置集群名称
-        namespace: 7c71952a-1032-464a-8f84-aee2f0fd44ad
+#        namespace: 7c71952a-1032-464a-8f84-aee2f0fd44ad
+        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
         group: MICROCLOUD_GROUP # 一般建议大写
         cluster-name: YootkCluster # 配置集群名称
-#  datasource:
-#    type: com.alibaba.druid.pool.DruidDataSource    # 数据源类型
-#    driver-class-name: com.mysql.cj.jdbc.Driver     # 驱动程序类
-#    url: jdbc:mysql://localhost:3306/yootk8001?serverTimezone=UTC           # 连接地址
-#    username: root                                  # 用户名
-#    password: root                            # 连接密码
-#    druid: # druid相关配置
-#      initial-size: 5                               # 初始化连接池大小
-#      min-idle: 10                                  # 最小维持连接池大小
-#      max-active: 50                                # 最大支持连接池大小
-#      max-wait: 60000                               # 最大等待时间
-#      time-between-eviction-runs-millis: 60000      # 关闭空闲连接间隔
-#      min-evictable-idle-time-millis: 30000         # 连接最小生存时间
-#      validation-query: SELECT 1 FROM dual          # 状态检测
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource    # 数据源类型
+    driver-class-name: com.mysql.cj.jdbc.Driver     # 驱动程序类
+    url: jdbc:mysql://localhost:3306/yootk8001?serverTimezone=UTC           # 连接地址
+    username: root                                  # 用户名
+    password: root                            # 连接密码
+    druid: # druid相关配置
+      initial-size: 5                               # 初始化连接池大小
+      min-idle: 10                                  # 最小维持连接池大小
+      max-active: 50                                # 最大支持连接池大小
+      max-wait: 60000                               # 最大等待时间
+      time-between-eviction-runs-millis: 60000      # 关闭空闲连接间隔
+      min-evictable-idle-time-millis: 30000         # 连接最小生存时间
+      validation-query: SELECT 1 FROM dual          # 状态检测
   application:
     name: seata
 #mybatis:
@@ -56,11 +57,12 @@ seata:
   tx-service-group: my_test_tx_group # 事务组，config.txt配置
   service:
     vgroup-mapping: # 事务群组的映射配置
-      my_test_tx_group: SeataCluster # 集群名称
+      my_test_tx_group: SeataCluster  # 集群名称
   config:
     nacos:
       server-addr: nacos-server:8848 # Nacos服务地址
-      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+#      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+      namespace: f7c5d562-0076-43fe-aca2-84eb1ebce2b0 # Seata的NameSpace地址
       group: SEATA_GROUP
       username: nacos
       password: nacos
@@ -68,9 +70,15 @@ seata:
     type: nacos # 基于Nacos实现分布式事务管理
     nacos:
       server-addr: nacos-server:8848 # Nacos服务地址
-      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+#      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+      namespace: f7c5d562-0076-43fe-aca2-84eb1ebce2b0 # Seata的NameSpace地址
       group: SEATA_GROUP
       username: nacos
       password: nacos
-#      cluster: SeataCluster
+      cluster: SeataCluster
       application: seata-server
+  enable-auto-data-source-proxy: false
+ribbon:
+  ConnectTimeout: 5000 # 连接超时时间(ms)
+  ReadTimeout: 5000 # 通信超时时间(ms)
+

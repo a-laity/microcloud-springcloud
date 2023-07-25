@@ -6,8 +6,8 @@ spring:
       discovery:
 #        server-addr: localhost:8848,localhost:8845,localhost:8851
         server-addr: localhost:8848
-#        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
-        namespace: 7c71952a-1032-464a-8f84-aee2f0fd44ad
+        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
+#        namespace: 7c71952a-1032-464a-8f84-aee2f0fd44ad
         group: MICROCLOUD_GROUP # 一般建议大写
         cluster-name: YootkCluster # 配置集群名称
   datasource:
@@ -54,11 +54,12 @@ seata:
   tx-service-group: my_test_tx_group # 事务组，config.txt配置
   service:
     vgroup-mapping: # 事务群组的映射配置
-      my_test_tx_group: SeataCluster # 集群名称
+      my_test_tx_group: SeataCluster  # 集群名称
   config:
     nacos:
       server-addr: nacos-server:8848 # Nacos服务地址
-      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+#      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+      namespace: f7c5d562-0076-43fe-aca2-84eb1ebce2b0 # Seata的NameSpace地址
       group: SEATA_GROUP
       username: nacos
       password: nacos
@@ -66,10 +67,16 @@ seata:
     type: nacos # 基于Nacos实现分布式事务管理
     nacos:
       server-addr: nacos-server:8848 # Nacos服务地址
-      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+#      namespace: 632b0df0-bcfc-40cc-b616-f5c1d0569bdf # Seata的NameSpace地址
+      namespace: f7c5d562-0076-43fe-aca2-84eb1ebce2b0 # Seata的NameSpace地址
       group: SEATA_GROUP
       username: nacos
       password: nacos
-      #      cluster: SeataCluster
+      cluster: SeataCluster
       application: seata-server
+  enable-auto-data-source-proxy: false
+ribbon:
+  ConnectTimeout: 5000 # 连接超时时间(ms)
+  ReadTimeout: 5000 # 通信超时时间(ms)
+
 

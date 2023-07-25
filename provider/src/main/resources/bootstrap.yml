@@ -4,7 +4,7 @@ spring:
       config:
 #        server-addr: localhost:8848,localhost:8845,localhost:8851
         server-addr: localhost:8848
-#        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
-        namespace: 7c71952a-1032-464a-8f84-aee2f0fd44ad
+        namespace: 637dd07e-91d4-4fc7-867d-45be3719f3cb
+#        namespace: 7c71952a-1032-464a-8f84-aee2f0fd44ad
         group: MICROCLOUD_GROUP # 一般建议大写
         cluster-name: YootkCluster # 配置集群名称

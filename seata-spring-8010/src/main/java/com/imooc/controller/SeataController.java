@@ -2,7 +2,9 @@ package com.imooc.controller;
 
 import com.imooc.bean.DeptDTO;
 import com.imooc.common.controller.CommonController;
+import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @describe todo
  */
 @RestController
+@Slf4j
 public class SeataController {
     @Autowired
     private CommonController commonController;
@@ -20,10 +23,12 @@ public class SeataController {
     @RequestMapping("/globalSeata")
     @GlobalTransactional // 全局事务控制
     public void globalSeataTest() {
+        log.info("Seata全局事务id=================>{}", RootContext.getXID());
         DeptDTO deptDTO = new DeptDTO();
-        deptDTO.setDeptno((long) 1);
+        deptDTO.setDeptno((long) 6);
         deptDTO.setDname("vv");
         deptDTO.setLoc("长春");
         commonController.add1(deptDTO);
+        double i = 1 / 0;
     }
 }

@@ -5,6 +5,8 @@ import com.imooc.service.IDeptService;
 import com.imooc.exception.CustomException;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.mapper.IDeptDao;
+import io.seata.core.context.RootContext;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -19,6 +21,7 @@ import java.util.Objects;
  * @describe todo
  */
 @Service
+@Slf4j
 public class DeptServiceImpl implements IDeptService {
     @Resource
     private IDeptDao deptDao;
@@ -53,6 +56,7 @@ public class DeptServiceImpl implements IDeptService {
     }
 
     public boolean add1(DeptDTO dto) {
+        log.info("Seata全局事务id=================>{}  add1", RootContext.getXID());
         int insert = deptDao.insert(dto);
         if (insert > 0) {
             return true;
