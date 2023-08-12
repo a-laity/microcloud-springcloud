@@ -1,12 +1,15 @@
-package com.imooc;
+package com.imooc.service.impl;
 
 import com.imooc.bean.DeptDTO;
 import com.imooc.service.IDeptService;
 import com.imooc.exception.CustomException;
 import com.imooc.grace.result.ResponseStatusEnum;
 import com.imooc.mapper.IDeptDao;
+import com.imooc.tcc.IDeptTCC;
 import io.seata.core.context.RootContext;
+import io.seata.rm.tcc.api.BusinessActionContext;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -25,6 +28,8 @@ import java.util.Objects;
 public class DeptServiceImpl implements IDeptService {
     @Resource
     private IDeptDao deptDao;
+    @Autowired
+    private IDeptTCC deptTCC;
 
     @Override
     @Transactional
@@ -63,6 +68,10 @@ public class DeptServiceImpl implements IDeptService {
         }
         return false;
 
+    }
+
+    public boolean add2(DeptDTO dto) {
+        return deptTCC.prepareAdd(new BusinessActionContext(), dto);
     }
 
     @Override

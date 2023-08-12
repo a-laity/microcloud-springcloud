@@ -31,6 +31,9 @@ public interface CommonController {
     @PostMapping("add1")
     public Object add1(@RequestBody DeptDTO deptDTO);
 
+    @PostMapping("add2") //TCC模式的调用
+    public Object add2(@RequestBody DeptDTO deptDTO);
+
     @ApiOperation(value = "部门列表", notes = "查询部门的完整信息")
     @GetMapping("list")
     public Object list();

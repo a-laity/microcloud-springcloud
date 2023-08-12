@@ -28,7 +28,21 @@ public class SeataController {
         deptDTO.setDeptno((long) 6);
         deptDTO.setDname("vv");
         deptDTO.setLoc("长春");
-        commonController.add1(deptDTO);
+        commonController.add(deptDTO);
         double i = 1 / 0;
     }
+
+
+    @RequestMapping("/SeataTCC")
+    @GlobalTransactional // 全局事务控制
+    public void SeataTCC() {
+        DeptDTO deptDTO = new DeptDTO();
+        deptDTO.setDeptno((long) 6);
+        deptDTO.setDname("vv");
+        deptDTO.setLoc("长春");
+        commonController.add2(deptDTO);
+        double i = 1 / 0;
+    }
+
+
 }

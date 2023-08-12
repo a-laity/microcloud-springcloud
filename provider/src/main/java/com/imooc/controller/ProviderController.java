@@ -49,6 +49,9 @@ public class ProviderController implements CommonController {
 
         return this.deptService.add1(deptDTO);
     }
+    public Object add2(@RequestBody DeptDTO deptDTO) {
+        return this.deptService.add2(deptDTO);
+    }
 
     private void printRequestHeaders(String restName) {    // 实现所有请求头信息的输出
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
